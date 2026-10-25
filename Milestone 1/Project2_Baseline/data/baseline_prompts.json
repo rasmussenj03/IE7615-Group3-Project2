@@ -1,0 +1,222 @@
+[
+  {
+    "prompt_id": "prompt_01",
+    "prompt": "there is a large book shelf in this living room",
+    "reference_image": "images/002619.png",
+    "coco_image_id": 439143,
+    "original_file_name": "000000439143.jpg",
+    "license": "Attribution-NoDerivs License",
+    "generation_seed": 1001,
+    "local_reference_image": "data/reference_images/000000439143.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000439143.jpg"
+  },
+  {
+    "prompt_id": "prompt_02",
+    "prompt": "A man riding on the back of a brown horse through a lush green field.",
+    "reference_image": "images/000456.png",
+    "coco_image_id": 357601,
+    "original_file_name": "000000357601.jpg",
+    "license": "Attribution-NonCommercial License",
+    "generation_seed": 1002,
+    "local_reference_image": "data/reference_images/000000357601.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000357601.jpg"
+  },
+  {
+    "prompt_id": "prompt_03",
+    "prompt": "A hot dog with sour kraut on a plate.",
+    "reference_image": "images/000102.png",
+    "coco_image_id": 5692,
+    "original_file_name": "000000005692.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1003,
+    "local_reference_image": "data/reference_images/000000005692.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000005692.jpg"
+  },
+  {
+    "prompt_id": "prompt_04",
+    "prompt": "there is various healthy vegetables on a plate",
+    "reference_image": "images/001126.png",
+    "coco_image_id": 531374,
+    "original_file_name": "000000531374.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1004,
+    "local_reference_image": "data/reference_images/000000531374.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000531374.jpg"
+  },
+  {
+    "prompt_id": "prompt_05",
+    "prompt": "A house is empty with no one in it.",
+    "reference_image": "images/001003.png",
+    "coco_image_id": 85836,
+    "original_file_name": "000000085836.jpg",
+    "license": "Attribution-NonCommercial-ShareAlike License",
+    "generation_seed": 1005,
+    "local_reference_image": "data/reference_images/000000085836.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000085836.jpg"
+  },
+  {
+    "prompt_id": "prompt_06",
+    "prompt": "A gray cat laying on top of a wooden book shelf.",
+    "reference_image": "images/000914.png",
+    "coco_image_id": 546378,
+    "original_file_name": "000000546378.jpg",
+    "license": "Attribution-NonCommercial License",
+    "generation_seed": 1006,
+    "local_reference_image": "data/reference_images/000000546378.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000546378.jpg"
+  },
+  {
+    "prompt_id": "prompt_07",
+    "prompt": "A MAN IS PLAYING ON THE BEACH WITH A FRIEND",
+    "reference_image": "images/000571.png",
+    "coco_image_id": 104221,
+    "original_file_name": "000000104221.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1007,
+    "local_reference_image": "data/reference_images/000000104221.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000104221.jpg"
+  },
+  {
+    "prompt_id": "prompt_08",
+    "prompt": "A green truck cake sitting on top of a table.",
+    "reference_image": "images/000419.png",
+    "coco_image_id": 214975,
+    "original_file_name": "000000214975.jpg",
+    "license": "Attribution-NonCommercial License",
+    "generation_seed": 1008,
+    "local_reference_image": "data/reference_images/000000214975.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000214975.jpg"
+  },
+  {
+    "prompt_id": "prompt_09",
+    "prompt": "A red double decker bus parked in front of a bus depot.",
+    "reference_image": "images/002771.png",
+    "coco_image_id": 576012,
+    "original_file_name": "000000576012.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1009,
+    "local_reference_image": "data/reference_images/000000576012.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000576012.jpg"
+  },
+  {
+    "prompt_id": "prompt_10",
+    "prompt": "Three people sitting down together for a meal.",
+    "reference_image": "images/002233.png",
+    "coco_image_id": 578369,
+    "original_file_name": "000000578369.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1010,
+    "local_reference_image": "data/reference_images/000000578369.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000578369.jpg"
+  },
+  {
+    "prompt_id": "prompt_11",
+    "prompt": "Three zebras in the sun in their enclosure.",
+    "reference_image": "images/000356.png",
+    "coco_image_id": 462052,
+    "original_file_name": "000000462052.jpg",
+    "license": "Attribution-NonCommercial-NoDerivs License",
+    "generation_seed": 1011,
+    "local_reference_image": "data/reference_images/000000462052.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000462052.jpg"
+  },
+  {
+    "prompt_id": "prompt_12",
+    "prompt": "a doll is sitting next to some pastries on a tray",
+    "reference_image": "images/002418.png",
+    "coco_image_id": 353494,
+    "original_file_name": "000000353494.jpg",
+    "license": "Attribution-ShareAlike License",
+    "generation_seed": 1012,
+    "local_reference_image": "data/reference_images/000000353494.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000353494.jpg"
+  },
+  {
+    "prompt_id": "prompt_13",
+    "prompt": "A pizza buffet with one slice taken out of a pizza.",
+    "reference_image": "images/001728.png",
+    "coco_image_id": 384983,
+    "original_file_name": "000000384983.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1013,
+    "local_reference_image": "data/reference_images/000000384983.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000384983.jpg"
+  },
+  {
+    "prompt_id": "prompt_14",
+    "prompt": "A woman standing next to a dog with a red frisbee in it's mouth.",
+    "reference_image": "images/000130.png",
+    "coco_image_id": 396684,
+    "original_file_name": "000000396684.jpg",
+    "license": "Attribution-NonCommercial-NoDerivs License",
+    "generation_seed": 1014,
+    "local_reference_image": "data/reference_images/000000396684.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000396684.jpg"
+  },
+  {
+    "prompt_id": "prompt_15",
+    "prompt": "A traffic light is flashing the color green.",
+    "reference_image": "images/000122.png",
+    "coco_image_id": 500664,
+    "original_file_name": "000000500664.jpg",
+    "license": "Attribution-ShareAlike License",
+    "generation_seed": 1015,
+    "local_reference_image": "data/reference_images/000000500664.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000500664.jpg"
+  },
+  {
+    "prompt_id": "prompt_16",
+    "prompt": "a picture of an old boat with a lot of people around it",
+    "reference_image": "images/000383.png",
+    "coco_image_id": 307462,
+    "original_file_name": "000000307462.jpg",
+    "license": "Attribution-NonCommercial-ShareAlike License",
+    "generation_seed": 1016,
+    "local_reference_image": "data/reference_images/000000307462.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000307462.jpg"
+  },
+  {
+    "prompt_id": "prompt_17",
+    "prompt": "A man fixing the inside of a toilet",
+    "reference_image": "images/000895.png",
+    "coco_image_id": 369478,
+    "original_file_name": "000000369478.jpg",
+    "license": "Attribution License",
+    "generation_seed": 1017,
+    "local_reference_image": "data/reference_images/000000369478.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000369478.jpg"
+  },
+  {
+    "prompt_id": "prompt_18",
+    "prompt": "A group of men in blue and red jerseys eating from a cake.",
+    "reference_image": "images/000952.png",
+    "coco_image_id": 55385,
+    "original_file_name": "000000055385.jpg",
+    "license": "Attribution-NonCommercial-ShareAlike License",
+    "generation_seed": 1018,
+    "local_reference_image": "data/reference_images/000000055385.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000055385.jpg"
+  },
+  {
+    "prompt_id": "prompt_19",
+    "prompt": "A man with a brown bag and blue jacket stands by a train that is moving.",
+    "reference_image": "images/002069.png",
+    "coco_image_id": 503585,
+    "original_file_name": "000000503585.jpg",
+    "license": "Attribution-NonCommercial-ShareAlike License",
+    "generation_seed": 1019,
+    "local_reference_image": "data/reference_images/000000503585.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000503585.jpg"
+  },
+  {
+    "prompt_id": "prompt_20",
+    "prompt": "A player swings a cricket bat on the playing field.",
+    "reference_image": "images/002465.png",
+    "coco_image_id": 376912,
+    "original_file_name": "000000376912.jpg",
+    "license": "Attribution-NonCommercial License",
+    "generation_seed": 1020,
+    "local_reference_image": "data/reference_images/000000376912.jpg",
+    "reference_source_url": "http://images.cocodataset.org/train2017/000000376912.jpg"
+  }
+]
