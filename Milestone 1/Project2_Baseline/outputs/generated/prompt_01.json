@@ -1,0 +1,45 @@
+{
+  "prompt_id": "prompt_01",
+  "prompt": "there is a large book shelf in this living room",
+  "reference_image": "images/002619.png",
+  "coco_image_id": 439143,
+  "original_file_name": "000000439143.jpg",
+  "license": "Attribution-NoDerivs License",
+  "generation_seed": 1001,
+  "local_reference_image": "data/reference_images/000000439143.jpg",
+  "reference_source_url": "http://images.cocodataset.org/train2017/000000439143.jpg",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "settings": {
+    "num_inference_steps": 25,
+    "guidance_scale": 7.5,
+    "height": 512,
+    "width": 512
+  },
+  "scheduler": "PNDMScheduler",
+  "scheduler_config": {
+    "num_train_timesteps": 1000,
+    "beta_start": 0.00085,
+    "beta_end": 0.012,
+    "beta_schedule": "scaled_linear",
+    "trained_betas": null,
+    "skip_prk_steps": true,
+    "set_alpha_to_one": false,
+    "prediction_type": "epsilon",
+    "timestep_spacing": "leading",
+    "steps_offset": 1,
+    "_use_default_values": [
+      "timestep_spacing",
+      "prediction_type"
+    ],
+    "_class_name": "PNDMScheduler",
+    "_diffusers_version": "0.6.0",
+    "clip_sample": false
+  },
+  "elapsed_seconds": 319.12,
+  "generated_image": "outputs/generated/prompt_01.png",
+  "nsfw_content_detected": [
+    false
+  ]
+}
