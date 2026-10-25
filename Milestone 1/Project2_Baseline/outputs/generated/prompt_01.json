@@ -9,7 +9,7 @@
   "local_reference_image": "data/reference_images/000000439143.jpg",
   "reference_source_url": "http://images.cocodataset.org/train2017/000000439143.jpg",
   "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
-  "device": "cpu",
+  "device": "mps",
   "dtype": "torch.float32",
   "settings": {
     "num_inference_steps": 25,
@@ -37,7 +37,7 @@
     "_diffusers_version": "0.6.0",
     "clip_sample": false
   },
-  "elapsed_seconds": 319.12,
+  "elapsed_seconds": 57.82,
   "generated_image": "outputs/generated/prompt_01.png",
   "nsfw_content_detected": [
     false
