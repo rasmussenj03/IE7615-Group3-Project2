@@ -1,0 +1,47 @@
+{
+  "prompt_id": "prompt_15",
+  "prompt": "A traffic light is flashing the color green.",
+  "seed": 1015,
+  "seed_offset": 0,
+  "sampler": "ddim",
+  "steps": 50,
+  "guidance_scale": 7.5,
+  "model_variant": "base",
+  "image": "prompt_15_seed1015_ddim_n50_g7p5.png",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "dtype": "torch.float16",
+  "settings": {
+    "sampler": "ddim",
+    "scheduler_class": "DDIMScheduler",
+    "num_inference_steps": 50,
+    "guidance_scale": 7.5,
+    "height": 512,
+    "width": 512,
+    "negative_prompt": "",
+    "eta": 0.0,
+    "scheduler_overrides": {},
+    "unet_passes_per_step": 2
+  },
+  "timings": {
+    "encode_s": 0.018,
+    "denoise_s": 25.974,
+    "decode_s": 0.889,
+    "total_s": 26.882,
+    "per_image_s": 6.72,
+    "batch_size": 4
+  },
+  "peak_memory_mb": 5080.9,
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.14.1+cu130",
+    "diffusers": "0.36.0",
+    "transformers": "4.57.6",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "safetensors": "0.7.0",
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 14.6,
+    "cuda": "13.0"
+  }
+}

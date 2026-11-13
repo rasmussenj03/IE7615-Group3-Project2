@@ -1,0 +1,178 @@
+{
+  "settings": {
+    "sampler": "ddim",
+    "steps": 50,
+    "guidance_scale": 7.5,
+    "seeds_per_prompt": 3,
+    "resolution": 512,
+    "variant": "base"
+  },
+  "clip_score_mean": 32.09142433802287,
+  "clip_score_reference_photos": 30.51079750061035,
+  "top1_generated": 1.0,
+  "top1_reference_photos": 0.949999988079071,
+  "sec_per_image": 6.630466666666664,
+  "peak_memory_mb": 5080.9,
+  "per_prompt": [
+    {
+      "prompt_id": "prompt_01",
+      "prompt": "there is a large book shelf in this living room",
+      "clip_score_mean": 31.383808135986328,
+      "clip_score_reference_photo": 31.133056640625,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.06774052232503891
+    },
+    {
+      "prompt_id": "prompt_02",
+      "prompt": "A man riding on the back of a brown horse through a lush green field.",
+      "clip_score_mean": 32.810160319010414,
+      "clip_score_reference_photo": 28.694080352783203,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.12772095203399658
+    },
+    {
+      "prompt_id": "prompt_03",
+      "prompt": "A hot dog with sour kraut on a plate.",
+      "clip_score_mean": 30.53905995686849,
+      "clip_score_reference_photo": 30.378517150878906,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.111306332051754
+    },
+    {
+      "prompt_id": "prompt_04",
+      "prompt": "there is various healthy vegetables on a plate",
+      "clip_score_mean": 30.14604314168294,
+      "clip_score_reference_photo": 30.02543067932129,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.09516173601150513
+    },
+    {
+      "prompt_id": "prompt_05",
+      "prompt": "A house is empty with no one in it.",
+      "clip_score_mean": 27.548505783081055,
+      "clip_score_reference_photo": 24.848764419555664,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.22323507070541382
+    },
+    {
+      "prompt_id": "prompt_06",
+      "prompt": "A gray cat laying on top of a wooden book shelf.",
+      "clip_score_mean": 34.69263585408529,
+      "clip_score_reference_photo": 32.90255355834961,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.12425631284713745
+    },
+    {
+      "prompt_id": "prompt_07",
+      "prompt": "A MAN IS PLAYING ON THE BEACH WITH A FRIEND",
+      "clip_score_mean": 30.471707661946613,
+      "clip_score_reference_photo": 25.805334091186523,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.20777888596057892
+    },
+    {
+      "prompt_id": "prompt_08",
+      "prompt": "A green truck cake sitting on top of a table.",
+      "clip_score_mean": 38.81287129720052,
+      "clip_score_reference_photo": 34.72520065307617,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.1567273885011673
+    },
+    {
+      "prompt_id": "prompt_09",
+      "prompt": "A red double decker bus parked in front of a bus depot.",
+      "clip_score_mean": 32.56270217895508,
+      "clip_score_reference_photo": 31.049108505249023,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.10433175414800644
+    },
+    {
+      "prompt_id": "prompt_10",
+      "prompt": "Three people sitting down together for a meal.",
+      "clip_score_mean": 27.304479598999023,
+      "clip_score_reference_photo": 28.154315948486328,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.2243608981370926
+    },
+    {
+      "prompt_id": "prompt_11",
+      "prompt": "Three zebras in the sun in their enclosure.",
+      "clip_score_mean": 32.00839042663574,
+      "clip_score_reference_photo": 35.86771774291992,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.049282949417829514
+    },
+    {
+      "prompt_id": "prompt_12",
+      "prompt": "a doll is sitting next to some pastries on a tray",
+      "clip_score_mean": 36.165828704833984,
+      "clip_score_reference_photo": 30.74723243713379,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.24055492877960205
+    },
+    {
+      "prompt_id": "prompt_13",
+      "prompt": "A pizza buffet with one slice taken out of a pizza.",
+      "clip_score_mean": 27.198171615600586,
+      "clip_score_reference_photo": 29.51748275756836,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.14931301772594452
+    },
+    {
+      "prompt_id": "prompt_14",
+      "prompt": "A woman standing next to a dog with a red frisbee in it's mouth.",
+      "clip_score_mean": 34.425750732421875,
+      "clip_score_reference_photo": 27.957630157470703,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.3079548180103302
+    },
+    {
+      "prompt_id": "prompt_15",
+      "prompt": "A traffic light is flashing the color green.",
+      "clip_score_mean": 33.15740458170573,
+      "clip_score_reference_photo": 29.931232452392578,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.1842748373746872
+    },
+    {
+      "prompt_id": "prompt_16",
+      "prompt": "a picture of an old boat with a lot of people around it",
+      "clip_score_mean": 27.607608795166016,
+      "clip_score_reference_photo": 29.772809982299805,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.20238812267780304
+    },
+    {
+      "prompt_id": "prompt_17",
+      "prompt": "A man fixing the inside of a toilet",
+      "clip_score_mean": 32.29306093851725,
+      "clip_score_reference_photo": 28.578502655029297,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.14142918586730957
+    },
+    {
+      "prompt_id": "prompt_18",
+      "prompt": "A group of men in blue and red jerseys eating from a cake.",
+      "clip_score_mean": 40.77249654134115,
+      "clip_score_reference_photo": 34.65630340576172,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.2605111300945282
+    },
+    {
+      "prompt_id": "prompt_19",
+      "prompt": "A man with a brown bag and blue jacket stands by a train that is moving.",
+      "clip_score_mean": 32.13133557637533,
+      "clip_score_reference_photo": 31.37575912475586,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.2581816613674164
+    },
+    {
+      "prompt_id": "prompt_20",
+      "prompt": "A player swings a cricket bat on the playing field.",
+      "clip_score_mean": 29.796464920043945,
+      "clip_score_reference_photo": 34.094993591308594,
+      "top1_rate": 1.0,
+      "seed_diversity": 0.3313850164413452
+    }
+  ]
+}

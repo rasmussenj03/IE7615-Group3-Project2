@@ -17,6 +17,7 @@ transformers==4.57.6
 diffusers==0.36.0
 accelerate==1.10.1
 safetensors==0.7.0
+peft==0.17.1  # LoRA adapters for the Milestone 2 cross-attention fine-tune
 
 # Notebook environment and utilities
 jupyter==1.1.1

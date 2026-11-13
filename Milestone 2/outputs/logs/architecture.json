@@ -1,0 +1,32 @@
+{
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "tokenizer_max_length": 77,
+  "text_encoder": "CLIPTextModel",
+  "text_encoder_params_M": 123.1,
+  "text_hidden_size": 768,
+  "unet_params_M": 859.5,
+  "unet_cross_attention_dim": 768,
+  "unet_cross_attention_layers": 16,
+  "vae_params_M": 83.7,
+  "vae_scaling_factor": 0.18215,
+  "latent_shape": [
+    4,
+    64,
+    64
+  ],
+  "image_size": [
+    512,
+    512
+  ],
+  "train_noise_schedule": {
+    "num_train_timesteps": 1000,
+    "beta_schedule": "scaled_linear",
+    "beta_start": 0.00085,
+    "beta_end": 0.012,
+    "prediction_type": null
+  },
+  "load_seconds": 57.7,
+  "gpu_memory_after_load_mb": 2056.6
+}

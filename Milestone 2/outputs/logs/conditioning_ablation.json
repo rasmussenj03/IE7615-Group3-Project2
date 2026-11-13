@@ -1,0 +1,34 @@
+[
+  {
+    "condition": "text + CFG",
+    "clip_score": 31.054018020629883,
+    "top1_intended": 1.0
+  },
+  {
+    "condition": "text, no CFG",
+    "clip_score": 26.18573760986328,
+    "top1_intended": 0.75
+  },
+  {
+    "condition": "unconditional",
+    "clip_score": 14.345110893249512,
+    "top1_intended": 0.0625
+  },
+  {
+    "condition": "shuffled text",
+    "clip_score": 16.41033935546875,
+    "top1_intended": 0.0,
+    "clip_score_vs_used_prompt": 31.930870056152344,
+    "top1_used_prompt": 1.0
+  },
+  {
+    "condition": "random context",
+    "clip_score": 17.919483184814453,
+    "top1_intended": 0.0
+  },
+  {
+    "condition": "real COCO photo (ceiling)",
+    "clip_score": 29.814119338989258,
+    "top1_intended": 0.875
+  }
+]
