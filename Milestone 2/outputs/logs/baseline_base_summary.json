@@ -7,7 +7,7 @@
     "resolution": 512,
     "variant": "base"
   },
-  "clip_score_mean": 32.09142433802287,
+  "clip_score_mean": 32.091424051920576,
   "clip_score_reference_photos": 30.51079750061035,
   "top1_generated": 1.0,
   "top1_reference_photos": 0.949999988079071,
@@ -17,18 +17,18 @@
     {
       "prompt_id": "prompt_01",
       "prompt": "there is a large book shelf in this living room",
-      "clip_score_mean": 31.383808135986328,
-      "clip_score_reference_photo": 31.133056640625,
+      "clip_score_mean": 31.38381067911784,
+      "clip_score_reference_photo": 31.1330623626709,
       "top1_rate": 1.0,
-      "seed_diversity": 0.06774052232503891
+      "seed_diversity": 0.06774044036865234
     },
     {
       "prompt_id": "prompt_02",
       "prompt": "A man riding on the back of a brown horse through a lush green field.",
-      "clip_score_mean": 32.810160319010414,
+      "clip_score_mean": 32.810157775878906,
       "clip_score_reference_photo": 28.694080352783203,
       "top1_rate": 1.0,
-      "seed_diversity": 0.12772095203399658
+      "seed_diversity": 0.1277208924293518
     },
     {
       "prompt_id": "prompt_03",
@@ -41,42 +41,42 @@
     {
       "prompt_id": "prompt_04",
       "prompt": "there is various healthy vegetables on a plate",
-      "clip_score_mean": 30.14604314168294,
-      "clip_score_reference_photo": 30.02543067932129,
+      "clip_score_mean": 30.14604123433431,
+      "clip_score_reference_photo": 30.025428771972656,
       "top1_rate": 1.0,
-      "seed_diversity": 0.09516173601150513
+      "seed_diversity": 0.0951617956161499
     },
     {
       "prompt_id": "prompt_05",
       "prompt": "A house is empty with no one in it.",
-      "clip_score_mean": 27.548505783081055,
+      "clip_score_mean": 27.548505147298176,
       "clip_score_reference_photo": 24.848764419555664,
       "top1_rate": 1.0,
-      "seed_diversity": 0.22323507070541382
+      "seed_diversity": 0.223235085606575
     },
     {
       "prompt_id": "prompt_06",
       "prompt": "A gray cat laying on top of a wooden book shelf.",
-      "clip_score_mean": 34.69263585408529,
+      "clip_score_mean": 34.69263712565104,
       "clip_score_reference_photo": 32.90255355834961,
       "top1_rate": 1.0,
-      "seed_diversity": 0.12425631284713745
+      "seed_diversity": 0.12425627559423447
     },
     {
       "prompt_id": "prompt_07",
       "prompt": "A MAN IS PLAYING ON THE BEACH WITH A FRIEND",
-      "clip_score_mean": 30.471707661946613,
-      "clip_score_reference_photo": 25.805334091186523,
+      "clip_score_mean": 30.47170639038086,
+      "clip_score_reference_photo": 25.805330276489258,
       "top1_rate": 1.0,
-      "seed_diversity": 0.20777888596057892
+      "seed_diversity": 0.20777897536754608
     },
     {
       "prompt_id": "prompt_08",
       "prompt": "A green truck cake sitting on top of a table.",
-      "clip_score_mean": 38.81287129720052,
+      "clip_score_mean": 38.812870025634766,
       "clip_score_reference_photo": 34.72520065307617,
       "top1_rate": 1.0,
-      "seed_diversity": 0.1567273885011673
+      "seed_diversity": 0.15672747790813446
     },
     {
       "prompt_id": "prompt_09",
@@ -89,10 +89,10 @@
     {
       "prompt_id": "prompt_10",
       "prompt": "Three people sitting down together for a meal.",
-      "clip_score_mean": 27.304479598999023,
+      "clip_score_mean": 27.304478963216145,
       "clip_score_reference_photo": 28.154315948486328,
       "top1_rate": 1.0,
-      "seed_diversity": 0.2243608981370926
+      "seed_diversity": 0.22436098754405975
     },
     {
       "prompt_id": "prompt_11",
@@ -105,18 +105,18 @@
     {
       "prompt_id": "prompt_12",
       "prompt": "a doll is sitting next to some pastries on a tray",
-      "clip_score_mean": 36.165828704833984,
+      "clip_score_mean": 36.165826161702476,
       "clip_score_reference_photo": 30.74723243713379,
       "top1_rate": 1.0,
-      "seed_diversity": 0.24055492877960205
+      "seed_diversity": 0.24055498838424683
     },
     {
       "prompt_id": "prompt_13",
       "prompt": "A pizza buffet with one slice taken out of a pizza.",
-      "clip_score_mean": 27.198171615600586,
+      "clip_score_mean": 27.19817288716634,
       "clip_score_reference_photo": 29.51748275756836,
       "top1_rate": 1.0,
-      "seed_diversity": 0.14931301772594452
+      "seed_diversity": 0.14931295812129974
     },
     {
       "prompt_id": "prompt_14",
@@ -129,10 +129,10 @@
     {
       "prompt_id": "prompt_15",
       "prompt": "A traffic light is flashing the color green.",
-      "clip_score_mean": 33.15740458170573,
+      "clip_score_mean": 33.157403310139976,
       "clip_score_reference_photo": 29.931232452392578,
       "top1_rate": 1.0,
-      "seed_diversity": 0.1842748373746872
+      "seed_diversity": 0.18427491188049316
     },
     {
       "prompt_id": "prompt_16",
@@ -153,24 +153,24 @@
     {
       "prompt_id": "prompt_18",
       "prompt": "A group of men in blue and red jerseys eating from a cake.",
-      "clip_score_mean": 40.77249654134115,
+      "clip_score_mean": 40.77249526977539,
       "clip_score_reference_photo": 34.65630340576172,
       "top1_rate": 1.0,
-      "seed_diversity": 0.2605111300945282
+      "seed_diversity": 0.2605110704898834
     },
     {
       "prompt_id": "prompt_19",
       "prompt": "A man with a brown bag and blue jacket stands by a train that is moving.",
       "clip_score_mean": 32.13133557637533,
-      "clip_score_reference_photo": 31.37575912475586,
+      "clip_score_reference_photo": 31.375762939453125,
       "top1_rate": 1.0,
       "seed_diversity": 0.2581816613674164
     },
     {
       "prompt_id": "prompt_20",
       "prompt": "A player swings a cricket bat on the playing field.",
-      "clip_score_mean": 29.796464920043945,
-      "clip_score_reference_photo": 34.094993591308594,
+      "clip_score_mean": 29.796467463175457,
+      "clip_score_reference_photo": 34.095001220703125,
       "top1_rate": 1.0,
       "seed_diversity": 0.3313850164413452
     }

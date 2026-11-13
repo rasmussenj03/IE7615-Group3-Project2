@@ -1,0 +1,47 @@
+{
+  "prompt_id": "prompt_14",
+  "prompt": "A woman standing next to a dog with a red frisbee in it's mouth.",
+  "seed": 1114,
+  "seed_offset": 100,
+  "sampler": "ddim",
+  "steps": 50,
+  "guidance_scale": 10,
+  "model_variant": "base",
+  "image": "prompt_14_seed1114_ddim_n50_g10.png",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "dtype": "torch.float16",
+  "settings": {
+    "sampler": "ddim",
+    "scheduler_class": "DDIMScheduler",
+    "num_inference_steps": 50,
+    "guidance_scale": 10,
+    "height": 512,
+    "width": 512,
+    "negative_prompt": "",
+    "eta": 0.0,
+    "scheduler_overrides": {},
+    "unet_passes_per_step": 2
+  },
+  "timings": {
+    "encode_s": 0.019,
+    "denoise_s": 13.55,
+    "decode_s": 0.46,
+    "total_s": 14.03,
+    "per_image_s": 7.015,
+    "batch_size": 2
+  },
+  "peak_memory_mb": 3861.9,
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.8.0",
+    "diffusers": "0.36.0",
+    "transformers": "4.57.6",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "safetensors": "0.7.0",
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 14.6,
+    "cuda": "12.8"
+  }
+}
