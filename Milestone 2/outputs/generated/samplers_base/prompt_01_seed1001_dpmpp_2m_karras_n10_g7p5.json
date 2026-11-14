@@ -1,0 +1,47 @@
+{
+  "prompt_id": "prompt_01",
+  "prompt": "there is a large book shelf in this living room",
+  "seed": 1001,
+  "seed_offset": 0,
+  "sampler": "dpmpp_2m_karras",
+  "steps": 10,
+  "guidance_scale": 7.5,
+  "model_variant": "base",
+  "image": "prompt_01_seed1001_dpmpp_2m_karras_n10_g7p5.png",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "dtype": "torch.float16",
+  "settings": {
+    "sampler": "dpmpp_2m_karras",
+    "scheduler_class": "DPMSolverMultistepScheduler",
+    "num_inference_steps": 10,
+    "guidance_scale": 7.5,
+    "height": 512,
+    "width": 512,
+    "negative_prompt": "",
+    "eta": null,
+    "scheduler_overrides": {},
+    "unet_passes_per_step": 2
+  },
+  "timings": {
+    "encode_s": 0.019,
+    "denoise_s": 5.136,
+    "decode_s": 0.917,
+    "total_s": 6.072,
+    "per_image_s": 1.518,
+    "batch_size": 4
+  },
+  "peak_memory_mb": 5080.4,
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "torch": "2.8.0",
+    "diffusers": "0.36.0",
+    "transformers": "4.57.6",
+    "peft": "0.17.1",
+    "accelerate": "1.10.1",
+    "safetensors": "0.7.0",
+    "gpu": "Tesla T4",
+    "gpu_memory_gb": 14.6,
+    "cuda": "12.8"
+  }
+}
