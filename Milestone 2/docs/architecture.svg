@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070 620" width="1070" height="620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b5532a"/>
+    </marker>
+    <style>
+      .box { fill:#fff; stroke:#333; stroke-width:1.4; rx:8; }
+      .text { fill:#eef4fb; }
+      .gen { fill:#f3f7ee; }
+      .train { fill:#fdf1ea; stroke:#b5532a; stroke-dasharray:6 4; }
+      .eval { fill:#f4f0fa; }
+      .t { font-size:14px; font-weight:bold; fill:#111; text-anchor:middle; }
+      .s { font-size:12px; fill:#333; text-anchor:middle; }
+      .lbl { font-size:11.5px; fill:#555; font-style:italic; }
+      .line { stroke:#333; stroke-width:1.5; fill:none; marker-end:url(#arr); }
+      .tline { stroke:#b5532a; stroke-width:1.5; fill:none; stroke-dasharray:6 4; marker-end:url(#arrT); }
+    </style>
+  </defs>
+  <rect width="1070" height="620" fill="#ffffff"/>
+
+  <!-- Text path -->
+  <rect class="box text" x="20" y="40" width="170" height="70"/>
+  <text class="t" x="105" y="68">Prompt</text>
+  <text class="s" x="105" y="88">"A red double decker bus…"</text>
+  <text class="lbl" x="22" y="128">plus "" for the unconditional c∅</text>
+
+  <rect class="box text" x="230" y="40" width="170" height="70"/>
+  <text class="t" x="315" y="68">CLIP tokenizer</text>
+  <text class="s" x="315" y="88">BPE → 77 token IDs</text>
+
+  <rect class="box text" x="440" y="40" width="230" height="70"/>
+  <text class="t" x="555" y="68">CLIP ViT-L/14 text encoder</text>
+  <text class="s" x="555" y="88">frozen · 123M params · last hidden state</text>
+
+  <rect class="box text" x="710" y="40" width="210" height="70"/>
+  <text class="t" x="815" y="68">Text context [c∅ ; c]</text>
+  <text class="s" x="815" y="88">2 × 77 × 768 per image</text>
+
+  <path class="line" d="M190,75 L228,75"/>
+  <path class="line" d="M400,75 L438,75"/>
+  <path class="line" d="M670,75 L708,75"/>
+
+  <!-- Denoising loop -->
+  <rect class="box gen" x="20" y="215" width="170" height="80"/>
+  <text class="t" x="105" y="245">Seeded noise z_T</text>
+  <text class="s" x="105" y="265">4 × 64 × 64 ~ N(0, I)</text>
+  <text class="s" x="105" y="282">one CPU generator per seed</text>
+
+  <rect class="box gen" x="240" y="185" width="300" height="140"/>
+  <text class="t" x="390" y="210">UNet ε_θ(z_t, t, c) · 860M params</text>
+  <text class="s" x="390" y="232">ResNet blocks + self-attention</text>
+  <text class="s" x="390" y="252">16 cross-attention blocks (attn2):</text>
+  <text class="s" x="390" y="270">Q ← image features, K, V ← text context</text>
+  <text class="s" x="390" y="292" fill="#b5532a">LoRA rank 8 on attn2 Q, K, V, out</text>
+  <text class="s" x="390" y="310" fill="#b5532a">(the only trainable weights)</text>
+
+  <rect class="box gen" x="580" y="215" width="190" height="80"/>
+  <text class="t" x="675" y="245">Classifier-free guidance</text>
+  <text class="s" x="675" y="268">ε̂ = ε∅ + w · (ε_c − ε∅)</text>
+
+  <rect class="box gen" x="810" y="215" width="240" height="80"/>
+  <text class="t" x="930" y="245">Scheduler step z_t → z_t−1</text>
+  <text class="s" x="930" y="268">DDIM · DDPM · PNDM · Euler · DPM++</text>
+
+  <path class="line" d="M190,255 L238,255"/>
+  <path class="line" d="M540,255 L578,255"/>
+  <path class="line" d="M770,255 L808,255"/>
+  <!-- text context into cross-attention -->
+  <path class="line" d="M815,110 L815,150 L390,150 L390,183"/>
+  <text class="lbl" x="560" y="144">keys and values of every cross-attention block</text>
+  <!-- loop back -->
+  <path class="line" d="M880,295 L880,355 L330,355 L330,327"/>
+  <text class="lbl" x="560" y="372">repeat for T sampling steps (10–100)</text>
+
+  <!-- Decode and evaluate -->
+  <rect class="box gen" x="860" y="400" width="190" height="70"/>
+  <text class="t" x="955" y="428">VAE decoder</text>
+  <text class="s" x="955" y="448">z_0 / 0.18215 → pixels</text>
+  <path class="line" d="M990,295 L990,398"/>
+  <text class="lbl" x="996" y="350">z_0</text>
+
+  <rect class="box gen" x="860" y="505" width="190" height="60"/>
+  <text class="t" x="955" y="531">Generated image</text>
+  <text class="s" x="955" y="550">512 × 512 RGB + JSON metadata</text>
+  <path class="line" d="M955,470 L955,503"/>
+
+  <rect class="box eval" x="590" y="505" width="230" height="60"/>
+  <text class="t" x="705" y="531">CLIP ViT-B/32 (Milestone 1)</text>
+  <text class="s" x="705" y="550">CLIP score · top-1 retrieval · diversity</text>
+  <path class="line" d="M860,535 L822,535"/>
+
+  <!-- LoRA training branch -->
+  <rect class="box train" x="20" y="400" width="170" height="70"/>
+  <text class="t" x="105" y="428">COCO image + caption</text>
+  <text class="s" x="105" y="448">M1 subset, 512², 20 held out</text>
+
+  <rect class="box train" x="225" y="400" width="150" height="70"/>
+  <text class="t" x="300" y="428">VAE encoder</text>
+  <text class="s" x="300" y="448">image → z_0</text>
+
+  <rect class="box train" x="410" y="400" width="160" height="70"/>
+  <text class="t" x="490" y="428">Forward process</text>
+  <text class="s" x="490" y="448">z_t = √ᾱ_t z_0 + √(1−ᾱ_t) ε</text>
+
+  <rect class="box train" x="20" y="505" width="550" height="60"/>
+  <text class="t" x="295" y="531">Loss ‖ε − ε_θ(z_t, t, c)‖², t ~ U{0..999}, 10% captions → ""</text>
+  <text class="s" x="295" y="550">gradients reach only the LoRA adapters; text encoder, VAE and other UNet weights stay frozen</text>
+
+  <path class="tline" d="M190,435 L223,435"/>
+  <path class="tline" d="M375,435 L408,435"/>
+  <path class="tline" d="M490,400 L490,327"/>
+  <path class="tline" d="M190,412 L212,412 L212,166 L315,166 L315,113"/>
+  <text class="lbl" x="220" y="180" fill="#b5532a">caption → tokenizer</text>
+
+  <!-- Legend -->
+  <line x1="20" y1="597" x2="60" y2="597" stroke="#333" stroke-width="1.5"/>
+  <text class="lbl" x="66" y="601">generation</text>
+  <line x1="150" y1="597" x2="190" y2="597" stroke="#b5532a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text class="lbl" x="196" y="601">LoRA fine-tuning only (training)</text>
+  <text x="20" y="22" font-size="15" font-weight="bold" fill="#111">Text → embedding → conditioning → image (Stable Diffusion 1.5, hand-wired in t2i.py)</text>
+</svg>
