@@ -1,6 +1,6 @@
 # Milestone 2 — Integration Write-up
 
-**IE7615 Group 3 · Project 2: Text-to-Image Generation** · DRAFT. Values marked **TODO** are filled in from `outputs/logs/` after the full GPU run.
+**IE7615 Group 3 · Project 2: Text-to-Image Generation**
 
 ## 1. Approach
 
@@ -14,7 +14,7 @@ We chose this track over a from-scratch DDPM because the graded outputs must be 
 
 | Stage | Component | Output for one image | Notes |
 |---|---|---|---|
-| Tokenize | `CLIPTokenizer` (BPE) | 77 token IDs | `<start>` + tokens + `<end>`, padded or truncated to 77. All 20 baseline prompts fit (longest: **TODO** tokens). |
+| Tokenize | `CLIPTokenizer` (BPE) | 77 token IDs | `<start>` + tokens + `<end>`, padded or truncated to 77. All 20 baseline prompts fit (longest: 16 tokens). |
 | Encode | `CLIPTextModel`, ViT-L/14 text tower, 123M params, frozen | c ∈ ℝ^{77×768} | We use the **per-token last hidden state**, not the pooled, projected 512-d vector that Milestone 1 used for retrieval. Cross-attention needs one vector per token. |
 | Unconditional context | same encoder on `""` | c∅ ∈ ℝ^{77×768} | A learned "no text" context, not zeros. |
 | Noise | seeded CPU `torch.Generator`, one per image | z_T ∈ ℝ^{4×64×64} | The same seed gives the same z_T on any GPU and at any batch size. |
@@ -23,7 +23,7 @@ We chose this track over a from-scratch DDPM because the graded outputs must be 
 | Step | `diffusers` scheduler built from SD's training config | z_{t−1} | Interchangeable: DDPM, DDIM, PNDM, Euler, Euler-a, DPM-Solver++ (with or without Karras σ). |
 | Decode | `AutoencoderKL` decoder, 84M params | 512×512 RGB | z₀ / 0.18215 → pixels in [−1, 1] → uint8. |
 
-**How text reaches the image.** The prompt never enters the UNet as pixels or as a single vector. In every cross-attention block, each spatial position of the UNet feature map computes attention weights over the 77 text tokens, softmax(Q·Kᵀ/√d), and adds the weighted sum of the token values to its features. Section 6 of Notebook 1 visualizes these weights: the maps for "cat" and "shelf" light up on the matching regions (**TODO** confirm after the run; figure `04_cross_attention_1.png`).
+**How text reaches the image.** The prompt never enters the UNet as pixels or as a single vector. In every cross-attention block, each spatial position of the UNet feature map computes attention weights over the 77 text tokens, softmax(Q·Kᵀ/√d), and adds the weighted sum of the token values to its features. Section 6 of Notebook 1 visualizes these weights: the maps for "cat" and "shelf" light up on the matching regions, as seen in  `04_cross_attention_1.png`.
 
 ## 3. Modifications to the pretrained pipeline
 
@@ -39,17 +39,17 @@ We chose this track over a from-scratch DDPM because the graded outputs must be 
 
 | Check | Result | Log |
 |---|---|---|
-| Our loop vs `StableDiffusionPipeline` on the same components, seeds and DDIM scheduler | max pixel difference **TODO**/255 (0/255 in our fp32 CPU test with small random-weight models) | `logs/equivalence_check.json` |
-| CLIP-B/32 score, text + CFG vs unconditional vs random context | **TODO** vs **TODO** vs **TODO** (real-photo ceiling **TODO**) | `logs/conditioning_ablation.json` |
-| Shuffled embeddings: does the image match the prompt that was *encoded*? | top-1 vs encoded prompt **TODO**, vs intended prompt **TODO** | same |
-| One-word edits with a fixed seed (cat→dog, red→blue, zebras→giraffes) | **TODO** | `figures/03_prompt_edits.png` |
-| Base vs LoRA on the 20 held-out prompts | CLIP score **TODO** → **TODO** | `logs/lora_vs_base.json` |
+| Our loop vs `StableDiffusionPipeline` on the same components, seeds and DDIM scheduler | max pixel difference 0/255 (0/255 in our fp32 CPU test with small random-weight models) | `logs/equivalence_check.json` |
+| CLIP-B/32 score, text + CFG vs unconditional vs random context | 31.054 vs 14.345 vs 17.919 (real-photo ceiling 29.814) | `logs/conditioning_ablation.json` |
+| Shuffled embeddings: does the image match the prompt that was *encoded*? | top-1 vs encoded prompt 1.0, vs intended prompt 0.0 (clip score of 16.410, clip score vs used prompt of 31.931) | same |
+| One-word edits with a fixed seed (cat→dog, red→blue, zebras→giraffes) | image generates as expected | `figures/03_prompt_edits.png` |
+| Base vs LoRA on the 20 held-out prompts | CLIP score  30.511→ 32.091 | `logs/lora_vs_base.json` |
 
 The shuffled-embedding test is the strongest evidence. If the generated image follows the swapped embedding and not the intended caption, the text pathway is what determines content.
 
 ## 5. Noise schedule: what we can and cannot vary
 
-SD 1.5 was trained with a `scaled_linear` β schedule (0.00085 to 0.012, 1,000 steps), and the UNet's ε prediction is only valid at those noise levels. We therefore vary the **sampling** side: sampler family (DDPM vs DDIM vs higher-order solvers), step count, timestep spacing (`leading`, `trailing`, `linspace`) and Karras σ spacing. We also run one deliberate **train/inference mismatch** test (sampling with linear and cosine β), which degrades the images (**TODO** describe). Training-time schedule comparisons (linear vs cosine) would need re-training. They remain a candidate for a small from-scratch DDPM in Milestone 3 if time allows.
+SD 1.5 was trained with a `scaled_linear` β schedule (0.00085 to 0.012, 1,000 steps), and the UNet's ε prediction is only valid at those noise levels. We therefore vary the **sampling** side: sampler family (DDPM vs DDIM vs higher-order solvers), step count, timestep spacing (`leading`, `trailing`, `linspace`) and Karras σ spacing. We also run one deliberate **train/inference mismatch** test (sampling with linear and cosine β), which degrades the images. Training-time schedule comparisons (linear vs cosine) would need re-training. They remain a candidate for a small from-scratch DDPM in Milestone 3 if time allows.
 
 ## 6. Reproducing
 

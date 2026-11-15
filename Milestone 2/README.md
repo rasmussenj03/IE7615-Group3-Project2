@@ -2,15 +2,13 @@
 
 The CLIP text encoder and the Stable Diffusion 1.5 diffusion model are wired together by hand and verified, and the integrated pipeline produces the baseline conditional outputs.
 
-## Status
-
-| Milestone 2 task | Where | Status |
+| Notebook | What it does | Result |
 |---|---|---|
-| 1. Integrate the text encoder with a diffusion model | `01_integration_and_training.ipynb` | Drafted |
-| 2. Run baseline conditional generation | `02_conditional_generation_sweeps.ipynb` | Drafted |
-| 3. Guidance-scale experiments | `02_conditional_generation_sweeps.ipynb`, Section 3 | Drafted |
-| 4. Noise schedule and sampling experiments | `02_conditional_generation_sweeps.ipynb`, Sections 4 and 5 | Drafted |
-| 5. Training logs and summary | to add to notebook 1 (see its Section 8), plus `docs/training_logs_summary.md` | Not started |
+| `01_integration_and_training.ipynb` |  Integrate the text encoder with a diffusion model | Outputs go to `Milestone 2/outputs/logs` and `Milestone 2/outputs/figures` |
+| `02_conditional_generation_sweeps.ipynb` | Run baseline conditional generation | Outputs go to `Milestone 2/outputs/generated`, with the `manifest.jsonl` file holding all generation information. |
+| `02_conditional_generation_sweeps.ipynb`, Section 3 | Guidance-scale experiments | Summary available in `outputs/gallery_base.pdf` |
+| `02_conditional_generation_sweeps.ipynb`, Sections 4 and 5 | Noise schedule and sampling experiments | Summary available in `outputs/gallery_base.pdf` |
+| to add to notebook 1 (see its Section 8), plus `docs/training_logs_summary.md` | Training logs and summary | Summary available in `outputs/gallery_base.pdf` |
 
 Each notebook ends with a "Next steps" section listing the cells to add for the remaining tasks and the existing helpers in `t2i.py` and `lora.py` they can use.
 
@@ -36,7 +34,16 @@ Use a CUDA GPU (a Colab T4 is enough). Install the root `requirements.txt`, then
 
 Notebook 2 resumes: an image with an existing JSON file is not regenerated. The first run downloads SD 1.5 (about 4 GB) and CLIP ViT-B/32 (about 600 MB) into the Hugging Face cache.
 
-**TODO (team):** measured run times.
+
+**Measured Run Time and Compute**
+| Experiment | Images | s / image | Attrib. min | Peak MiB |
+|---|---|---|---|---|
+| Baseline | 60 | 6.63 | 6.63 | 5080.9 | 
+| Guidance sweep | 126 | 6.26 | 13.15 | 5080.2 |
+| Sampler / step sweep | 126 | 3.78 | 7.94 | 5080.5 |
+| 100-step reference | 6 | 13.43 | 1.34 | 5080.4 |
+| Timestep spacing | 36 | 2.22 | 1.33 | 5080.2|
+| Schedule mismatch | 18 | 6.80 | 2.04 | 5080.2 |
 
 ## Reproducibility
 
